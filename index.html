@@ -6,13 +6,18 @@
     <link href='css/main.css' rel='stylesheet'>
   </head>
   <body>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-md-12'>
-          <h1>Blasting Off With Bootstrap</h1>
-        </div>
-      </div>
+    <div class='navbar navbar-default navbar-static-top'>
+      <div class='container'>
+        <a href='/' class='navbar-brand'>Blasting Off With Bootstrap</a>
 
+        <ul class='nav navbar-nav navbar-right'>
+          <li><a href='tickets.html'>Tickets</a></li>
+          <li><a href='stations.html'>Stations</a></li>
+          <li><a href='about.html'>About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class='container'>
       <div class='row well well-lg'>
         <div class='col-md-6'>
           <h2>The Fastest Way to Space</h2>
@@ -53,7 +58,6 @@
         </blockquote>
       </div>
     </div>
-
     <div class='container transport-systems'>
       <div class='row'>
         <div class='col-md-10 col-md-offset-1'>
@@ -62,8 +66,8 @@
         </div>
       </div>
 
-      <div class='row text-center well'>
-        <div class='transporter col-md-3 col-md-offset-1 well'>
+      <div class='row text-center'>
+        <div class='transporter col-md-3 col-md-offset-1 well well-sm'>
           <h3>Transporter</h3>
           <ul class='list-unstyled'>
             <li>8 second travel time</li>
@@ -72,7 +76,7 @@
           </ul>
           <p><button class='btn btn-info'><i class='glyphicon glyphicon-transfer'></i> Beam Me Up!</button></p>
         </div>
-        <div class='space-elevator col-md-3 col-md-offset-1 well'>
+        <div class='space-elevator col-md-3 col-md-offset-1 well well-sm'>
           <h3>Space Elevator</h3>
           <ul class='list-unstyled'>
             <li>8 hour scenic ride</li>
@@ -81,7 +85,7 @@
           </ul>
           <p><button class='btn btn-info'><i class='glyphicon glyphicon-sort'></i> Board the Elevator!</button></p>
         </div>
-        <div class='rocketbus col-md-3 col-md-offset-1 well'>
+        <div class='rocketbus col-md-3 col-md-offset-1 well well-sm'>
           <h3>RocketBus</h3>
           <ul class='list-unstyled'>
             <li>8 minute scenic ride</li>
@@ -89,6 +93,31 @@
             <li>$74.99 lets you blast off today!</li>
           </ul>
           <p><button class='btn btn-info'><i class='glyphicon glyphicon-plane'></i> Blast Off!</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-10 col-md-offset-1'>
+          <h2>Plan Your Trip Today!</h2>
+          <ul class='nav nav-tabs'>
+            <li class=' active'><a href='#time'>Today's Times</a></li>
+            <li><a href='#deals'>Hot Deals</a></li>
+            <li><a href='#forecast'>Forecast</a></li>
+          </ul>
+
+          <div class='tab-content'>
+            <div class='tab-pane fade active' id='time'>
+              <p>Today's Time here</p>
+            </div>
+            <div class='tab-pane fade active' id='deals'>
+              <p>Deals here</p>
+            </div>
+            <div class='tab-pane fade active' id='forecast'>
+              <p>Forecast</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -139,5 +168,13 @@
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
     <script src='js/bootstrap.min.js'></script>
+    <script>
+      $(function() {
+        $('.nav-tabs a').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        });
+      });
+    </script>
   </body>
 </html>
